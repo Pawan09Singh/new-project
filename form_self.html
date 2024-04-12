@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        body {
+            padding-top:20px;
+            padding-bottom:30px;
+            font-family: Arial, sans-serif;
+            background-color:rgba(128, 128, 128, 0.519);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            width: 320px;
+            border-radius: 10px;
+            box-shadow:0 0 10px rgb(6, 6, 15)
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="password"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #1d351e;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #419445;
+            transform:scale(1.05);
+            cursor:pointer;
+            font-size:13px;
+        }
+        fieldset {
+            border: 2px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        input:focus,textarea:focus,select:focus{
+            background-color: rgba(186, 201, 255, 0.317);
+        }
+        .interest1{
+            display: none;            
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="form-container">
+        <h1 style="text-align: center;">Admission Form</h1>
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter your password">
+
+        <fieldset>
+            <legend>Gender</legend>
+            <label><input type="radio" name="gender" value="male">Male</label>
+            <label><input type="radio" name="gender" value="female">Female</label>
+        </fieldset>
+
+        <label for="city">City</label>
+        <select>
+            <option value="City01">City01</option>
+            <option value="City02">City02</option>
+            <option value="City03">City03</option>
+        </select>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date">
+
+        <fieldset>
+            <legend>Interests</legend>
+            <label><input type="checkbox" name="interest" value="programming">Programming</label>
+            <label><input type="checkbox" name="interest" value="design">Design</label>
+            <label><input type="checkbox" name="interest" value="marketing">Marketing</label>
+        </fieldset>
+
+        <h3> Other</h3>
+
+        <div class="interest1">
+        <label for="interests">Select Your Interests:</label>
+        <input type="checkbox" id="music" name="interests"> 
+        <label for="music"> Music</label>
+        <input type="checkbox" id="sports" name="interests" value="sports">
+        <label for="sports"> Sports</label>
+        <input type="checkbox" id="coding" name="interests" value="coding">
+        <label for="coding"> Coding</label>
+        </div>
+
+      <label for="subject">Subject</label>
+      <select id="subject" name="subject">
+        <option value="general">General</option>
+        <option value="feedback">Feedback</option>
+        <option value="support">Support</option>
+      </select>
+
+      <label for="file">Select a file:</label>
+      <input type="file" id="file" name="file">
+
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Write something..." style="height: 100px"></textarea>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+        <!-- <input type="submit" value="Submit"> -->
+    </div>
+</body>
+</html>
